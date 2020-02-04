@@ -1,0 +1,77 @@
+/*background gradient from www.uigradients.com*/
+body{
+	background: #56CCF2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#container{
+	background: #ffb3b3;
+	width: 400px;
+	margin: 100px auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+h1{
+	background-color: #ff4d4d;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 30px;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li{
+	background: #ffe6e6;
+	line-height: 40px;
+}
+/*makes every 2nd row banded*/
+li:nth-child(2n){
+	background-color: #ffb3b3;
+}
+input{
+	font-size: 20px;
+	background-color: #ffb3b3;
+	line-height: 40px;
+	width: 100%;
+	box-sizing: border-box;/*makes input box fit into the container*/
+	color: #ff4d4d;
+	border: 3px solid rgba(0, 0, 0, 0);/*removes gap between first list item and input box*/
+}
+/*modifies default outline around input box*/
+input:focus{
+	background: #fff;
+	outline: none;
+	border: 3px solid #ffb3b3;
+}
+.fa-plus-square{
+	float: right;
+}
+.fa-plus-square:hover{
+	font-size: 35px;
+	transition: 0.15s linear;
+}
+span{
+	height: 100%;
+	width: 0;
+	background-color: #ff4d4d;
+	color: white;
+	display: inline-block;/*makes the red background of trash icon fill the entire row width and height*/
+	text-align: center;
+	margin-right: 20px;
+	transition: 0.2s linear;/*smooth transition*/
+	opacity: 0;/*makes the trash icon disappear when not hovering*/
+}
+
+li:hover span{
+	width: 40px;
+	opacity: 1.0;/*makes the trash icon reappear when not hovering*/
+}
